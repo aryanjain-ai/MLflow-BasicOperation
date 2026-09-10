@@ -13,6 +13,13 @@ from sklearn.linear_model import ElasticNet
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
 
+# Remote MLflow Tracking Server hosted on AWS EC2
+remote_server_uri = "http://52.206.5.115:5000"
+mlflow.set_tracking_uri(remote_server_uri)
+
+
+
+
 logging.basicConfig(level=logging.WARN)
 logger = logging.getLogger(__name__)
 
